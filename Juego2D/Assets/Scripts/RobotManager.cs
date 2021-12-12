@@ -40,6 +40,8 @@ public class RobotManager : MonoBehaviour
 
             Crouch();
 
+            Roll();
+
             Run();
         }
     }
@@ -106,7 +108,19 @@ public class RobotManager : MonoBehaviour
         }
     }
 
-   /* void Run()
+   void Roll()
+    {
+        if (Input.GetKey(KeyCode.LeftAlt))
+        {
+            animator.SetBool("Roll", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftAlt))
+        {
+            animator.SetBool("Roll", false);
+        }
+    }
+
+    void Run()
     {
         if (Input.GetKey(KeyCode.LeftControl))
         {
@@ -116,7 +130,7 @@ public class RobotManager : MonoBehaviour
         {
             animator.SetBool("Run", false);
         }
-    }*/
+    }
 
     //Control de suelo
     private void OnCollisionEnter2D(Collision2D collision)
