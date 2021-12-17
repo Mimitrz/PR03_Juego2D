@@ -101,10 +101,12 @@ public class RobotManager : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             animator.SetBool("Crouch", true);
+            maxSpeed = 1.5f;
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             animator.SetBool("Crouch", false);
+            maxSpeed = 3.5f;
         }
     }
 
@@ -113,10 +115,12 @@ public class RobotManager : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftAlt))
         {
             animator.SetBool("Roll", true);
+            maxSpeed = 4f;
         }
         else if (Input.GetKeyUp(KeyCode.LeftAlt))
         {
             animator.SetBool("Roll", false);
+            maxSpeed = 3.5f;
         }
     }
 
@@ -125,10 +129,12 @@ public class RobotManager : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl))
         {
             animator.SetBool("Run", true);
+            maxSpeed = 7f;
         }
         else if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             animator.SetBool("Run", false);
+            maxSpeed = 3.5f;
         }
     }
 
